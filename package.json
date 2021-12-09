@@ -1,0 +1,23 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gourab-sinha/task-manager.git"
+  },
+  "author": "Gourab Sinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gourab-sinha/task-manager/issues"
+  },
+  "homepage": "https://github.com/gourab-sinha/task-manager#readme",
+  "dependencies": {
+    "@aws-sdk/client-batch": "^3.43.0",
+    "aws-sdk": "^2.1045.0"
+  }
+}
