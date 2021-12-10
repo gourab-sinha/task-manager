@@ -157,7 +157,39 @@ async createComputeEnvironment(params = {}) {
         console.log('target  :', f);
     }
 ```
-
+### Create Job Definition
+```
+    /**
+     * 
+     * @param {*} params 
+     * @returns 
+     */
+    async createJobDefinition(params = {}) {
+        const jobDefinition = await this.Batch.registerJobDefinition(params);
+        if (!jobDefinition) {
+            return {
+                message: `Couldn't register job definition.`
+            };
+        }
+        return { message: 'Successfully registered job definition.' }
+    }
+```
+### Deregister Job Definition
+```
+    /**
+     * 
+     * @param {*} params 
+     */
+    async deregisterJobDefinition(params = {}) {
+        const job = await this.Batch.deregisterJobDefinition(params, (error, data) => {
+            if (error) {
+                console.log(error);
+                return;
+            }
+            console.log(data);
+        });
+    }
+```
 ### Save Task
 ```
     /**
